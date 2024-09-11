@@ -194,11 +194,11 @@ body {
 .vguard-image {
   width: 100%;
   height: auto;
-  max-width: 850px;
+  max-width: 750px;
   height: 600px;
-  object-fit: cover;
-  position: relative;
   top: 42px;
+  position: relative;
+  object-fit: cover;
   border-radius: 20px;
   transition: transform 0.3s ease;
 }
@@ -207,13 +207,12 @@ body {
   transform: scale(1.05);
 }
 
-/* Bottom Splice */
 .bottom-splice {
   display: flex;
   justify-content: center;
   padding: 20px;
   background-color: #ffffff;
-  margin-top: 50px;
+  margin-top: 200px;
   box-shadow: 0 4px 6px rgb(0, 0, 0);
 }
 
