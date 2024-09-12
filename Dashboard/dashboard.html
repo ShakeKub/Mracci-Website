@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,17 +19,59 @@
 
     <div class="welcome-section">
         <h1 id="typed-h1"><span class="blue-text">Welcome </span>to<span class="blue-text"> Dashboard</span></h1>
-        <p id="status-message" style="color: red;"><b>Your bot is not connected.</b></p>
+        <p id="status-message" class="status-message" style="padding: 50px; color: red;"><b>Your bot is not connected.</b></p>
+    </div>
+
+    <div class="user-info">
+        <img src="../images/logo.png" alt="Avatar" class="avatar">
+        <div class="user-details">
+            <p class="username">Username</p>
+            <p class="level">Level: 10</p>
+        </div>
     </div>
 
     <div class="control-panel">
-        <div class="user-info">
-            <img src="../images/logo.png" alt="Avatar" class="avatar">
-            <div class="user-details">
-                <p class="username">Username</p>
-                <p class="level">Level: 10</p>
-            </div>
-        </div>
+        <!-- Content for each button (hidden by default, will be shown dynamically) -->
+        <div id="settings-content" class="panel-content">Settings Content <br> asdasd <br> saasd <br> asdasd <br> asdasd <br> sadasd </div>
+        <div id="homepage-content" class="panel-content">Home Page Content</div>
+        <div id="commands-content" class="panel-content">Commands Content</div>
+        <div id="dashboard-content" class="panel-content">Dashboard Content</div>
+        <div id="thirdparties-content" class="panel-content">Third Parties Content</div>
+        <div id="admin-content" class="panel-content">Admin Content</div>
+        <div id="text-content" class="panel-content">Text Content</div>
+        <div id="text2-content" class="panel-content">Text2 Content</div>
+        <div id="credits-content" class="panel-content">Credits Content</div>
+    </div>
+
+    <div class="control-settings">
+        <!-- Buttons with icons -->
+        <button class="settings-btn" onclick="showPanel('settings')">
+            <i class="fas fa-cog"></i> Settings
+        </button>
+        <button class="homepage-btn" onclick="showPanel('homepage')">
+            <i class="fas fa-home"></i> Home Page
+        </button>
+        <button class="commands-btn" onclick="showPanel('commands')">
+            <i class="fas fa-terminal"></i> Commands
+        </button>
+        <button class="dashboard-btn" onclick="showPanel('dashboard')">
+            <i class="fas fa-chart-pie"></i> Dashboard
+        </button>
+        <button class="thirdparties-btn" onclick="showPanel('thirdparties')">
+            <i class="fas fa-plug"></i> Third Parties
+        </button>
+        <button class="admin-btn" onclick="showPanel('admin')">
+            <i class="fas fa-user-shield"></i> Admin
+        </button>
+        <button class="text-btn" onclick="showPanel('text')">
+            <i class="fas fa-align-left"></i> Text
+        </button>
+        <button class="text2-btn" onclick="showPanel('text2')">
+            <i class="fas fa-align-right"></i> Text2
+        </button>
+        <button class="credits-btn" onclick="showPanel('credits')">
+            <i class="fas fa-coins"></i> Credits <br>
+        </button>
     </div>
 
     <script src="script.js"></script>

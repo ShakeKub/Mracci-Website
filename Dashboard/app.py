@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'OMPzlveuVtk2k_xgkrv-OpbhkK2A0IRT'
 
 DISCORD_CLIENT_ID = '1277964660339118111'
-DISCORD_CLIENT_SECRET = 'OMPzlveuVtk2k_xgkrv-OpbhkK2A0IRT'
+DISCORD_CLIENT_SECRET = "C:\Users\shake\Documents\GitHub\Mracci-Website\.env"
 REDIRECT_URI = 'http://localhost:5000/callback'
 DISCORD_API_URL = 'https://discord.com/api/v10'
 
