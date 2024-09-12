@@ -12,10 +12,8 @@ DISCORD_CLIENT_SECRET = "C:\Users\shake\Documents\GitHub\Mracci-Website\.env"
 REDIRECT_URI = 'http://localhost:5000/callback'
 DISCORD_API_URL = 'https://discord.com/api/v10'
 
-# Temporary store for bot link status (in-memory for this example)
 linked_bots = {}
 
-# Set template directories
 app.jinja_loader = ChoiceLoader([
     FileSystemLoader('Dashboard'),
     FileSystemLoader('Main Page')
@@ -23,7 +21,7 @@ app.jinja_loader = ChoiceLoader([
 
 @app.route('/')
 def index():
-    return render_template('index.html')  # Main Page template
+    return render_template('index.html') 
 
 @app.route('/login')
 def login():
@@ -38,10 +36,8 @@ def callback():
         token = get_token(code)
         user_id = get_user_id(token)
 
-        # Link the bot to the user
         linked_bots[user_id] = True
 
-        # Store the user ID and token in the session
         session['user_id'] = user_id
         session['access_token'] = token
         return redirect('/dashboard')
@@ -51,10 +47,9 @@ def callback():
 @app.route('/dashboard')
 def dashboard():
     if 'user_id' not in session or not linked_bots.get(session['user_id'], False):
-        return redirect('/')  # Redirect to home if not linked
+        return redirect('/')  
 
-    return render_template('dashboard.html')  # Dashboard template
-
+    return render_template('dashboard.html')  
 @app.route('/check_connection')
 def check_connection():
     user_id = session.get('user_id')
